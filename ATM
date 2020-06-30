@@ -1,1 +1,88 @@
 
+public class Hesap {
+    
+    private String userName;
+    private String password;
+    private int accountNumber;
+    private int amount;
+
+    public Hesap(String userName, String password, int accountNumber,int amount){
+        this.userName = userName;
+        this.password = password;
+        this.accountNumber = accountNumber;
+        this.amount = amount;
+    }
+    
+    public void payInto(int moneyAmount){
+        setAmount(getAmount() + moneyAmount);
+        
+    }
+    
+    public void drawMoney(int moneyAmount){
+        setAmount(getAmount() - moneyAmount);
+        
+    }
+    
+    public void showMoney(){
+        System.out.println("Your property is : " + getAmount() + " dollars");
+    }
+    
+
+    /**
+     * @return the userName
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    /**
+     * @param userName the userName to set
+     */
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    /**
+     * @return the accountNumber
+     */
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    /**
+     * @param accountNumber the accountNumber to set
+     */
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    /**
+     * @return the amount
+     */
+    public int getAmount() {
+        return amount;
+    }
+
+    /**
+     * @param amount the amount to set
+     */
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+    
+    
+}
