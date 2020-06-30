@@ -1,0 +1,21 @@
+
+import java.util.Scanner;
+
+public class Login {
+    
+    public static boolean login(Hesap hesap){
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Please enter the username : ");
+        String user = scanner.nextLine();
+        System.out.println("Please enter the password : ");
+        String pass = scanner.nextLine();
+
+        if(hesap.getUserName().equals(user) && hesap.getPassword().equals(pass)){
+            return true;
+        }
+        return false;
+    }
+    
+}
