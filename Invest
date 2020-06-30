@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        
+        //%6 interest a month
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Welcome to app the calculate interest");
+       
+        System.out.println("How much money do you think invest?");
+        
+        double investAmount = scanner.nextDouble();
+        
+        System.out.println("How many months money stay the bank?");
+        
+        int month = scanner.nextInt();
+        
+        double monthSaving = (investAmount * 6 / 100) * month + investAmount;
+        
+        System.out.println("Money that saving end of " + month + " month : " + monthSaving + " dollars");
+        
+        double totalSaving = (investAmount * 6 / 100) * 12 + investAmount;
+        
+        System.out.println("Money that saving end of the year : " + totalSaving + " dollars");
+        
+        
+    }
+}
