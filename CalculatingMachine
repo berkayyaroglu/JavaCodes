@@ -1,0 +1,168 @@
+
+import java.util.Scanner;
+
+public class Main {
+    
+    public static int sum(int number1, int number2){
+        return number1 + number2;
+    }
+    
+    public static int sum(int number1, int number2,int number3){
+        return number1 + number2 + number3;
+    }
+    
+    public static int subtraction(int number1, int number2){
+        return number1 - number2;
+    }
+    
+     public static int subtraction(int number1, int number2, int number3){
+        return number1 - number2 - number3;
+    }
+     
+    public static int multiplication(int number1, int number2){
+        return number1 * number2;
+    }
+    
+    public static int multiplication(int number1, int number2, int number3){
+        return number1 * number2 * number3;
+    }
+    
+    public static double division(int number1, int number2){
+        return number1 / number2;
+    }
+    
+    public static double division(int number1, int number2, int number3){
+        return number1 / number2 / number3;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Calculating Program has started...");
+        System.out.println("Which do you do transaction?");
+        System.out.println("1-Sum\n2-Substraction\n3-Multiplication\n4-Division\n5-Exit");
+        String choice = scanner.nextLine();
+        
+        do {            
+            
+            if(choice.equals("1")){
+                System.out.println("How many number are sum?(2 or 3)");
+                int num = scanner.nextInt();
+                
+                if(num == 2){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second number");
+                    int num2 = scanner.nextInt();
+                    System.out.println("Result : " + sum(num1, num2));
+                    break;
+                }
+                else if(num == 3){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second number");
+                    int num2 = scanner.nextInt();
+                    System.out.println("You can enter the third number");
+                    int num3 = scanner.nextInt();
+                    System.out.println("Result : " + sum(num1, num2, num3));
+                    break;
+                }
+                else{
+                    System.out.println("Wrong choice!");
+                }
+            }
+            
+            
+            else if(choice.equals("2")){
+                System.out.println("How many number are subtracte?(2 or 3)");
+                int num = scanner.nextInt();
+                
+                if(num == 2){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second number");
+                    int num2 = scanner.nextInt();
+                    System.out.println("Result : " + subtraction(num1, num2));
+                    break;
+                                   }
+                else if(num == 3){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second number");
+                    int num2 = scanner.nextInt();
+                    System.out.println("You can enter the third number");
+                    int num3 = scanner.nextInt();
+                    System.out.println("Result : " + subtraction(num1, num2, num3));
+                    break;
+                }
+                else{
+                    System.out.println("Wrong choice!");
+                }
+            }
+            
+            
+            else if(choice.equals("3")){
+                System.out.println("How many number are multiplicate?(2 or 3)");
+                int num = scanner.nextInt();
+                
+                if(num == 2){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second number");
+                    int num2 = scanner.nextInt();
+                    System.out.println("Result : " + multiplication(num1, num2));
+                    break;
+                }
+                else if(num == 3){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second number");
+                    int num2 = scanner.nextInt();
+                    System.out.println("You can enter the third number");
+                    int num3 = scanner.nextInt();
+                    System.out.println("Result : " + multiplication(num1, num2, num3));
+                    break;
+                }
+                else{
+                    System.out.println("Wrong choice!");
+                }
+            }
+            
+            else if(choice.equals("4")){
+                System.out.println("How many number are divide?(2 or 3)");
+                int num = scanner.nextInt();
+                
+                if(num == 2){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second number");
+                    int num2 = scanner.nextInt();
+                    System.out.println("Result : " + division(num1, num2));
+                    break;
+                }
+                else if(num == 3){
+                    System.out.println("You can enter the first number");
+                    int num1 = scanner.nextInt();
+                    System.out.println("You can enter the second numeber");
+                    int num2 = scanner.nextInt();
+                    System.out.println("You can enter the third number");
+                    int num3 = scanner.nextInt();
+                    System.out.println("Result : " + division(num1, num2, num3));
+                    break;
+                }
+                else{
+                    System.out.println("Wrong choice!");
+                }
+            }
+             
+            else if(choice.equals("5")){
+                break;
+            }
+            
+            else{
+                System.out.println("Wrong choice!");
+            }
+            
+           
+        } while (true);
+    }
+}
