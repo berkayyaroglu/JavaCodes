@@ -14,13 +14,11 @@ public class Hesap {
     }
     
     public void payInto(int moneyAmount){
-        setAmount(getAmount() + moneyAmount);
-        
+        amount += moneyAmount;
     }
     
     public void drawMoney(int moneyAmount){
-        setAmount(getAmount() - moneyAmount);
-        
+        amount -= moneyAmount;
     }
     
     public void showMoney(){
