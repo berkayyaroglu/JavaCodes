@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to app!");
+        
+        String systemUserName = "berkay yaroglu";
+        String systemPassword = "abc123";
+        
+        
+        do {            
+        System.out.print("Please enter your username : ");
+        String userName = scanner.nextLine();
+        
+        System.out.print("Please enter your password : ");
+        String password = scanner.nextLine();
+        
+        if(systemUserName.equals(userName) && !systemPassword.equals(password) ){
+            System.out.println("Password is wrong!");
+            
+        }
+        else if(!systemUserName.equals(userName) && systemPassword.equals(password)){
+            System.out.println("Username is wrong!");
+           
+        }
+        else if(!systemUserName.equals(userName) && !systemPassword.equals(password)){
+            System.out.println("Username and password are wrong!");
+           
+        }
+        else{
+            System.out.println("Login is successful...");
+            break;
+        }
+        
+        } while (true);
+        
+        
+    }
+    
+}
