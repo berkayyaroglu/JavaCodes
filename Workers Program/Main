@@ -1,0 +1,93 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Welcome to Workers Program");
+        
+        String transactions = "-Transactions-\n1- Software Developer transactins"
+                            +"\n2- Administrators transactions\n3-Press the 'q' for quit";
+        System.out.println("-----------------------------------------------------");
+        System.out.println(transactions);
+        
+        while(true){
+            System.out.println("Chose the transaction");
+            String choice = scanner.nextLine();
+            
+            if(choice.equals("q")){
+                System.out.println("Leaving the program...");
+                break;
+            }
+            
+            else if(choice.equals("1")){
+                
+                SoftwareDeveloper softwareDeveloper = new SoftwareDeveloper("Berkay", "YAROĞLU", 720, "Java,C,C++,C#");
+                String softwareTransaction = "\n1.Reset The Pc\n2-Show Info\n3-Press the 'q' for exit";
+                System.out.println(softwareTransaction);
+                while (true) {      
+                   System.out.println("Choice the transaction");
+                   String sdChoice = scanner.nextLine();
+                   
+                   if(sdChoice.equals("q")){
+                       System.out.println("Leaving the developer transactions...");
+                       break;
+                   }
+                   
+                   else if(sdChoice.equals("1")){
+                       System.out.println("Operating System : ");
+                       String opSystem = scanner.nextLine();
+                       softwareDeveloper.resetThePc(opSystem);
+                   }
+                   
+                   else if(sdChoice.equals("2")){
+                       softwareDeveloper.showInfo();
+                   }
+                   
+                   else{
+                       System.out.println("Wrong developer transaction!");
+                   }
+                }           
+            }
+            
+            else if(choice.equals("2")){
+                Administrator administrator = new Administrator("Max", "Tegmark", 123, 10);
+                
+                String administrattorTransaction = "Administrator Transactions\n1-Increase salary\n2-Show Info"
+                                            +"\n3-Press the '' for exit";
+                System.out.println(administrattorTransaction);
+                
+                while(true){
+                    System.out.println("Choose the transaction");
+                    String n_choice = scanner.nextLine();
+                    
+                    if(n_choice.equals("q")){
+                        System.out.println("Exit the Adm.Transactions....");
+                        break;
+                    }
+                    
+                    else if(n_choice.equals("1")){
+                        System.out.println("Enter the increase amount,please : ");
+                        int incSalary = scanner.nextInt();
+                        scanner.nextLine();
+                        administrator.increaseSalary(incSalary);
+                    }
+                    
+                    else if(n_choice.equals("2")){
+                        administrator.showInfo();
+                    }
+                    
+                    else{
+                        System.out.println("Wrong choice");
+                    }
+                }
+            }
+            
+            else{
+                System.out.println("Wrong choice!");
+            }
+        }
+        
+    }
+}
