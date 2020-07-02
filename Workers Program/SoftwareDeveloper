@@ -1,0 +1,21 @@
+
+public class SoftwareDeveloper extends Worker{
+    
+    private String softwareLanguage;
+    
+    public SoftwareDeveloper(String name, String surname, int id, String softwareLanguage) {
+        super(name, surname, id);
+        this.softwareLanguage = softwareLanguage;
+    }
+    
+    public void resetThePc(String operating_system){
+        System.out.println(getName() + " is downloading " + operating_system);
+    }
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Software languages which developer's know : " + softwareLanguage);
+    }
+    
+}
