@@ -1,0 +1,21 @@
+
+public class Administrator extends Worker{
+    
+    private int responsiblePersonCount;
+
+    public Administrator(String name, String surname, int id, int responibleOfPersonCount) {
+        super(name, surname, id);
+        this.responsiblePersonCount = responibleOfPersonCount;
+    }
+
+    @Override
+    public void showInfo() {
+         super.showInfo();
+         System.out.println("Person count which administrator's responsible : " + responsiblePersonCount);
+    }
+    
+    public void increaseSalary(int amount){
+            System.out.println(getName() + " has increased " + amount + " dollars the worker's salary.");
+    }
+    
+}
