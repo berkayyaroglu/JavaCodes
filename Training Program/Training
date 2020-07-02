@@ -37,7 +37,7 @@ public class Training {
         }
         
         else{
-            System.out.println("Ther is not this exercise!");
+            System.out.println("There is not this exercise!");
         }
         
     }
