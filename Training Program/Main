@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Welcome to Training Program...");
+        
+        String train = "|||The Exercises|||\nBurpee\nPushup\nSitup\nSquat";
+                
+        System.out.println(train);
+        
+        System.out.println("Create a training,please...");
+        
+        System.out.print("Burpee Number : " );
+        int burpee = scanner.nextInt();
+        System.out.print("Pushup Number : " );
+        int pushup = scanner.nextInt();
+        System.out.print("Situp Number : " );
+        int situp = scanner.nextInt();
+        System.out.print("Squat Number : " );
+        int squat = scanner.nextInt();
+        scanner.nextLine();
+        
+        Training training = new Training(burpee, pushup, situp, squat);
+        
+        System.out.println("Your training is starting");
+        
+        while(training.hasTrainingFinished() == false){
+            System.out.print("Excersize Type(Burpee-Pushup-Situp-Squat) : ");
+            String type = scanner.nextLine();
+            System.out.println("How many do this exercise type : ");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            training.exercise(type, number);
+        }
+        System.out.println("Your exercise has done...");
+    }
+}
