@@ -1,0 +1,175 @@
+
+public class Training {
+    
+    private int burpeeNumber;
+    private int pushupNumber;
+    private int situpNumber;
+    private int squatNumber;
+    
+    public Training(int burpee, int pushup, int situp, int squat){
+        burpeeNumber = burpee;
+        pushupNumber = pushup;
+        situpNumber = situp;
+        squatNumber = squat;
+    }
+ 
+    public boolean hasTrainingFinished(){
+        
+        return ((burpeeNumber == 0) && (pushupNumber == 0) && (situpNumber == 0) && (squatNumber == 0));
+    }
+    
+    public void exercise(String execiseType, int amount){
+        
+        if(execiseType.equals("Burpee")){
+            doBurpee(amount);
+        }
+        
+        else if(execiseType.equals("Pushup")){
+            doPushup(amount);
+        }
+        
+        else if(execiseType.equals("Situp")){
+            doSitup(amount);
+        }
+        
+        else if(execiseType.equals("Squat")){
+            doSquat(amount);
+        }
+        
+        else{
+            System.out.println("Ther is not this exercise!");
+        }
+        
+    }
+    
+    public void doBurpee(int amount){
+        
+        if(burpeeNumber == 0){
+            System.out.println("Your burpee exercise done");
+        }
+        
+        if(burpeeNumber - amount < 0){
+            System.out.println("Congratulations! You passed the burpee number");
+            burpeeNumber = 0;
+            System.out.println("The rest : " + burpeeNumber);
+        }
+        
+        else{
+            burpeeNumber -= amount;
+            System.out.println("The rest : " + burpeeNumber);
+        }   
+    }
+    
+    public void doPushup(int amount){
+        
+        if(pushupNumber == 0){
+            System.out.println("Your pushup exercise done");
+        }
+        
+        if(pushupNumber - amount < 0){
+            System.out.println("Congratulations! You passed the pushup number");
+            pushupNumber = 0;
+            System.out.println("The rest : " + pushupNumber);
+        }
+        
+        else{
+            pushupNumber -= amount;
+            System.out.println("The rest : " + pushupNumber);
+        }   
+    }
+    
+     public void doSitup(int amount){
+        
+        if(situpNumber == 0){
+            System.out.println("Your situp exercise done");
+        }
+        
+        if(situpNumber - amount < 0){
+            System.out.println("Congratulations! You passed the situp number");
+            situpNumber = 0;
+            System.out.println("The rest : " + situpNumber);
+        }
+        
+        else{
+            situpNumber -= amount;
+            System.out.println("The rest : " + situpNumber);
+        }   
+    }
+     
+     
+     public void doSquat(int amount){
+        
+        if(squatNumber == 0){
+            System.out.println("Your squat exercise done");
+        }
+        
+        if(squatNumber - amount < 0){
+            System.out.println("Congratulations! You passed the squat number");
+            squatNumber = 0;
+            System.out.println("The rest : " + squatNumber);
+        }
+        
+        else{
+            squatNumber -= amount;
+            System.out.println("The rest : " + squatNumber);
+        }   
+    }
+    
+    /**
+     * @return the burpeeNumber
+     */
+    public int getBurpeeNumber() {
+        return burpeeNumber;
+    }
+
+    /**
+     * @param burpeeNumber the burpeeNumber to set
+     */
+    public void setBurpeeNumber(int burpeeNumber) {
+        this.burpeeNumber = burpeeNumber;
+    }
+
+    /**
+     * @return the pushupNumber
+     */
+    public int getPushupNumber() {
+        return pushupNumber;
+    }
+
+    /**
+     * @param pushupNumber the pushupNumber to set
+     */
+    public void setPushupNumber(int pushupNumber) {
+        this.pushupNumber = pushupNumber;
+    }
+
+    /**
+     * @return the situpNumber
+     */
+    public int getSitupNumber() {
+        return situpNumber;
+    }
+
+    /**
+     * @param situpNumber the situpNumber to set
+     */
+    public void setSitupNumber(int situpNumber) {
+        this.situpNumber = situpNumber;
+    }
+
+    /**
+     * @return the squatNumber
+     */
+    public int getSquatNumber() {
+        return squatNumber;
+    }
+
+    /**
+     * @param squatNumber the squatNumber to set
+     */
+    public void setSquatNumber(int squatNumber) {
+        this.squatNumber = squatNumber;
+    }
+    
+    
+}
