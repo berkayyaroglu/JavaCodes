@@ -18,7 +18,12 @@ public class Hesap {
     }
     
     public void drawMoney(int moneyAmount){
+        if(moneyAmount > amount){
+        System.out.println("You have not enough money");
+        }
+        else{
         amount -= moneyAmount;
+        }
     }
     
     public void showMoney(){
