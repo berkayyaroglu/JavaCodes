@@ -1,0 +1,34 @@
+public class Question6 {
+    
+    public static int sumOfSquare(){
+       int total = 0;
+        
+        for(int i = 1; i <=100; i++){
+           int sumOfSquare = (int) Math.pow(i, 2);
+           total += sumOfSquare;
+        }
+        System.out.println(total);
+        return total;
+    }
+    
+    public static int squareOfSum(){
+        int total = 0;
+        
+        for(int i = 1; i <= 100; i++){
+            total += i;        
+        }
+        total = (int) Math.pow(total, 2);
+        System.out.println("Total : " + total);
+        
+        return total;
+    }
+    
+    public static void main(String[] args) {
+        
+        System.out.print("Sum of square = ");
+        sumOfSquare();
+        System.out.println("----------------------------------");
+        System.out.print("Square of sum = ");
+        squareOfSum();
+    }
+}
