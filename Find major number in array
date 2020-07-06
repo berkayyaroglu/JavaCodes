@@ -1,0 +1,44 @@
+
+
+import java.util.Random;
+
+public class Question11 {
+
+    public static void findMax(int[][] number){
+    
+        int largeNumber = 0;
+        
+        for(int i = 0; i < 20; i++){
+           for(int j = 0; j <20; j++){       
+                if(number[i][j] > largeNumber){
+                    largeNumber = number[i][j];
+                }
+            }
+            System.out.println("|" + largeNumber + "|");
+            largeNumber = 0;
+        }    
+        
+    }
+    
+    
+    public static void main(String[] args) {
+        
+       Random random = new Random();
+        
+       int array[][] = new int[20][20];
+        
+        for(int i = 0; i <20; i++){
+            for(int j = 0; j < 20; j++){  
+                int number = random.nextInt(100);
+                array[i][j] = number;
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println("\n");
+                
+        }
+        System.out.println("-----------------------------------------");
+        
+        findMax(array);
+     }
+    
+    }
