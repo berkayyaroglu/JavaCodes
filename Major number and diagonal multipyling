@@ -1,6 +1,4 @@
 
-package Problem11_20;
-
 import java.util.Random;
 
 public class Question11 {
