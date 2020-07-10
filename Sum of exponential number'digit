@@ -1,0 +1,23 @@
+ public static void calculatePow(int exponentiate){
+        
+        int first_number = (int)Math.pow(2, exponentiate);
+        System.out.println("Exponential number result: " + first_number);
+        
+        int sum = 0;
+        int number = first_number;
+        int i = 0;
+        
+        while(number > 0){
+            sum += number % 10;
+            number /= 10;
+            i++;
+            System.out.println("Situation " + i + "-->Number : " + number + " Sum = " + sum);
+        }
+        System.out.println("Grand total = " + sum);
+    }
+    
+    public static void main(String[] args) {
+
+        calculatePow(1000);
+        
+    }
